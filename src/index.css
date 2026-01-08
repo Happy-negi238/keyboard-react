@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --width-add: 54px;
+  --shadow-add: 0 4px 8px -1px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse-shadow {
+  0%, 100% {
+    box-shadow: 0 5px 10px -1px hsla(0, 0%, 0%, 0.1);
+    transform: translateY(0px);
+  }
+  50% {
+    box-shadow: 0 0px 12px 1px oklab(47.051% -0.02383 -0.27752);
+    /* transform: translateY(-3px); */
+  }
+}
+.animate-pulse {
+  animation: pulse-shadow 2s infinite ease-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
